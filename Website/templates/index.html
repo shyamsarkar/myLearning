@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Business Frontpage Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static', filename = 'vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{{url_for('static', filename = 'css/business-frontpage.css')}}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start gaming pc build</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-primary py-0 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">Full PC Setup</h1>
+          <p style="color: white; font-size: 18px">If you have aspirations of building your very own humble gaming PC,
+            then look no further. For around Rs.50,000, we've put together a nice mid-tier build that provides excellent
+            720p performance at medium to high graphics settings. If need you need a build that's more suitable for
+            1080p gaming, our high-end gaming PC build guide is a great place to start.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Detail Below....</h2>
+        <hr>
+        <p>The Ryzen 5 3600 is an excellent candidate for mid-range gaming. It outclasses our previous pick for this
+          build, the Intel Core i5 8400, and offers superior performance, overclocking and a slick-looking stock cooler
+          all around the same price point. </p>
+        <p>Alternatively, you could go with the previous generation Ryzen 5 2600 for a small drop in price, and while it
+          may not be quite as fast as the 3600, it still has all the same features and matches the i5 8400 almost pound
+          for pound. If you're looking for a little more juice, though, the Ryzen 5 3600X can give it to you for about
+          $40 more.</p>
+        <p>Ultimately we went with the 3600 because it gave us the best bang for our buck and some additional room to
+          expand into more powerful 3rd gen AMD CPUs down the line.</p>
+        <p>If you're looking for a little extra power in your next build, check out our guide to the best CPU for gaming
+          in 2020.</p>
+        <a class="btn btn-primary btn-lg" href="#">Ask Me &raquo;</a>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>Contact Us</h2>
+        <hr>
+        <address>
+          <strong>Chhattisgarh</strong>
+          <br>Raipur
+          <br>Pachpedi Naka, Raipur City
+          <br>
+        </address>
+        <address>
+          <abbr title="Phone">Ph:</abbr>
+          (07701)-123456
+          <br>
+          <abbr title="Email">E-mail:</abbr>
+          <a href="mailto:#">email@gmail.com</a>
+        </address>
+      </div>
+    </div>
+    <!-- /.row -->
+    <div class="mb-4">
+      <h2>Processor</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{url_for('static', filename = '1.jpg')}}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">AMD Ryzen 3 3200G</h4>
+            <p class="card-text">AMD Ryzen 3 3200G with RadeonVega 8 Graphics Desktop Processor 4 Cores up to 4GHz 6MB
+              Cache AM4 Socket (YD3200C5FHBOX)</p>
+            <ul>
+              <li>4 Cores & 4 Threads</li>
+              <li>Base Clock: 3.6GHz, Max Boost Clock: up to 4GHz, 6MB Cache, TDP: 65W</li>
+              <li>System Memory Specification: 2933MHz, System Memory Type: DDR4, Memory Channels: 2</li>
+              <li>Socket: AM4, Motherboard Compatibility: AMD 300, 400, 500 serles chipset based motherboards</li>
+              <li>Graphics: AMD Radeon Vega 8 Graphics, Heatsink Fan: Wraith Stealth, Warranty: 3 Years</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.amazon.in/AMD-RyzenTM-3200G-RadeonTM-Graphics/dp/B07STGHZK8/ref=sr_1_1?dchild=1&keywords=ryzen+3+3200g&qid=1600832735&sr=8-1"
+            class="btn btn-primary" target="_blank">Buy From Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{url_for('static', filename = '2.jpg')}}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">AMD Ryzen 5 3400G</h4>
+            <p class="card-text">AMD Ryzen 5 3400G with Radeon RX Vega 11 Graphics Desktop Processor 4 Cores up to
+              4.2GHz 6MB Cache AM4 Socket (YD3400C5FHBOX)</p>
+            <ul>
+              <li>4 Cores & 8 Threads</li>
+              <li>Base Clock: 3.7GHz, Max Boost Clock: up to 4.2GHz, 6MB Cache, TDP: 65W</li>
+              <li>System Memory Specification: 2933MHz, System Memory Type: DDR4, Memory Channels: 2</li>
+              <li>Socket: AM4, Motherboard Compatibility: AMD 300, 400, 500 serles chipset based motherboards</li>
+              <li>Graphics: AMD Radeon RX Vega 11 Graphics, Heatsink Fan: Wraith Spire, Warranty: 3 Years</li>
+            </ul>
+
+          </div>
+          <div class="card-footer">
+            <a href="https://www.amazon.in/AMD-Ryzen-3400G-Processor-YD3400C5FHBOX/dp/B07SXNDKNM/ref=sr_1_1?dchild=1&keywords=ryzen+5+3400g&qid=1600832813&sr=8-1"
+              class="btn btn-primary" target="_blank">Buy From Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="{{url_for('static', filename = '3.jpg')}}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">AMD Ryzen 7 2700</h4>
+            <p class="card-text">AMD Ryzen 7 2700 Desktop Processor 8 Cores up to 4.1GHz 20MB Cache AM4 Socket
+              (YD2700BBAFBOX)</p>
+            <ul>
+              <li>AMD Ryzen 7 2700 processor is designed to offer you the highest multiprocessing performance in its
+                class for demanding gamers and creators. The 8 core processor equipped with true machine learning is
+                designed to utilize the resources effectively and will offer your brilliant gaming experience when
+                paired with a equally capable graphics card.</li>
+              <li>Ryzen 7 2700 comes with 16 threads which would enable fast creative workloads. Applications and tasks
+                involving web-browsers, Web Servers, games, Text editors, IDE's would benefit in a positive way with
+                enhanced performance, reduced render times and seamless designing and content creation and streaming.
+              </li>
+              <li>The unlocked processor has a base clock speed of 3.2 GHz with Max Boost Clock of 4.1 GHz. It comes
+                with Wraith Spire with RGB cooler adding that extra flair to the setup and making sure the processor is
+                cooled sufficiently which ensures stable performance even when the processor is handling intensive tasks
+              </li>
+              <li>All this paired with 20Mb of combined cache with L1 of 768 Kb, L2 of 4Mb and L3 cache of 16Mb for
+                rapid access to large data sets. The massive Cache memory on-board translates to superior game
+                performance and other multi-threaded processes.</li>
+              <li>It has a TDP rating of 65W with dual channel DDR4 support for upto 29333Mhz. The processor is
+                recommended to go with X370 Chipset with a Ryzen ready AM4 motherboard. It supports AMD StoreMI
+                Technology, AMD SenseMI Technology, AMD Ryzen Master Utility, AMD Ryzen VR-Ready Premium.</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.amazon.in/AMD-YD2700BBAFBOX-4-1GHz-Socket-Processor/dp/B07B41717Z/ref=sr_1_1?dchild=1&keywords=ryzen+7+apu&qid=1600833454&sr=8-1"
+              class="btn btn-primary" target="_blank">Buy From Amazon</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="container">
+      <div class="mb-4">
+        <h2>Motherboard</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <img class="card-img-top" src="{{url_for('static', filename = '4.jpg')}}" alt="">
+            <div class="card-body">
+              <h4 class="card-title">MSI A320M-A PRO MAX</h4>
+              <p class="card-text">MSI A320M-A PRO MAX AMD AM4 Socket m-ATX Motherboard for Ryzen 1st 2nd 3rd Gen
+                A-Series Athlon X4 Desktop Processors</p>
+              <ul>
+                <li>Supports 1st, 2nd and 3rd Gen AMD Ryzen / Ryzen with Radeon Vega Graphics and 2nd Gen AMD Ryzen with
+                  Radeon Graphics / Athlon with Radeon Vega Graphics and A-series / Athlon X4 Desktop Processors for
+                  Socket AM4</li>
+                <li>Supports DDR4 Memory, up to 3200 (OC) MHz. Supports 1866/ 2133/ 2400/ 2667Mhz (by JEDEC) 2667/ 2800/
+                  2933/ 3000/ 3066/ 3200 MHz (by A-XMP OC MODE)</li>
+                <li>Turbo M.2: Running at PCI-E Gen3 x4 maximizes performance for NVMe based SSDs.</li>
+                <li>Audio Boost: Reward your ears with studio grade sound quality. X-Boost: Software that auto-detects
+                  and allows you to boost the performance of any storage or USB device.</li>
+                <li>Core Boost: With premium layout and fully digital power design to support more cores and provide
+                  better performance.</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.amazon.in/MSI-PRO-MAX-Motherboard-Processors/dp/B07W838R4F/ref=pd_bxgy_img_3/260-0571259-8293608?_encoding=UTF8&pd_rd_i=B07W838R4F&pd_rd_r=478ac1b4-1f2d-43b2-a317-ddc6fcdad27d&pd_rd_w=56SjL&pd_rd_wg=OZyC6&pf_rd_p=3e9f62d7-4196-4823-b41a-9bba671558ea&pf_rd_r=2151N75Q8K1ARNQF7QDJ&psc=1&refRID=2151N75Q8K1ARNQF7QDJ"
+                class="btn btn-primary" target="_blank">Buy From Amazon</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <img class="card-img-top" src="{{url_for('static', filename = '5.jpg')}}" alt="">
+            <div class="card-body">
+              <h4 class="card-title">ASUS Prime A320M-K</h4>
+              <p class="card-text">ASUS Prime A320M-K AM4 uATX Motherboard With LED lighting DDR4 32Gb/s M.2 HDMI SATA
+                6Gb/s USB 3.0</p>
+              <ul>
+                <li>2 x DIMM, Max. 32GB, DDR4 2400/2133 MHz Un-buffered, Non-ECC Memory.</li>
+                <li>Fan Xpert Dedicated CPU and case fan controls Exclusive Fan Xpert ensures every fan achieves the
+                  best balance of cooling performance and low noise - and with Prime A320 series boards and their
+                  hardware-level 4-pin/3-pin PWM/DC mode for case fans, a simple BIOS adjustment lets you run your case
+                  fan in PWM/DC.</li>
+                <li>Lightning-fast storage speeds with acclaimed UEFI BIOS with EZ Flash 3.</li>
+                <li>Onboard resettable fuses prevent overcurrent and short-circuit damage. This extends beyond I/O ports
+                  to DRAM to safeguard the lifespan of your system and connected devices.</li>
+                <li>ASUS-exclusive DIGI+ VRM intelligently delivers power to the processor based on real-time demands,
+                  reducing energy waste and improving system stability.</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.amazon.in/Asus-PRIME-A320M-K-AM4-Motherboard/dp/B06ZY2F35X/ref=pd_sbs_147_3/260-0571259-8293608?_encoding=UTF8&pd_rd_i=B06ZY2F35X&pd_rd_r=270c3e1f-d153-43db-bf65-68713acd550f&pd_rd_w=0UjgQ&pd_rd_wg=jSjgu&pf_rd_p=00b53f5d-d1f8-4708-89df-2987ccce05ce&pf_rd_r=PXM1KDS6T5JQXQG12JB6&psc=1&refRID=PXM1KDS6T5JQXQG12JB6"
+                class="btn btn-primary" target="_blank">Buy From Amazon</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <img class="card-img-top" src="{{url_for('static', filename = '6.jpg')}}" alt="">
+            <div class="card-body">
+              <h4 class="card-title">ASUS EX-A320M Gaming</h4>
+              <p class="card-text">ASUS EX-A320M Gaming AMD Motherboard</p>
+              <ul>
+                <li>Micro-ATX A320 feature with AURA sync,, USBGuard and Gold-plated x16 PCIe, LAN port, and 8-pin power
+                  connector</li>
+                <li>Anti-moisture Coating</li>
+                <li>Non-stop durability</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.amazon.in/ASUS-EX-A320M-Gaming-AMD-Motherboard/dp/B0771L77V7/ref=psdc_1375344031_t2_B06ZY2F35X"
+                class="btn btn-primary" target="_blank">Buy From Amazon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+
+    <div class="container">
+      <div class="mb-4">
+        <h2>RAM</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <img class="card-img-top" src="{{url_for('static', filename = '7.jpg')}}" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Corsair Vengeance LPX 8GB DDR4</h4>
+              <p class="card-text">Corsair Vengeance LPX 8GB DDR4 3000 (PC4-24000) C16 PC Memory (CMK8GX4M1D3000C16)</p>
+              <ul>
+                <li>Each vengeance LPX module is built with a pure aluminium heat spreader for faster heat dissipation and cooler operation</li>
+                <li>Available in multiple colours to match your motherboard, your components, or just your style</li>
+                <li>Vengeance LPX is optimized and compatibility tested for the latest Intel Z370 series motherboards and offers higher frequencies, greater bandwidth, and lower power consumption</li>
+                <li>The Vengeance LPX module height is carefully designed to fit smaller spaces</li>
+                <li>XMP 2.0 enabled for superior overclocking
+                  Warranty, Parts: Lifetime Warranty(Max 10 Years)
+                  Country of Origin: Taiwan</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.amazon.in/Corsair-Vengeance-3000Mhz-Motherboard-CMK8GX4M1D3000C16/dp/B07B4FRMGV/ref=sr_1_4?dchild=1&keywords=ddr4+ram&qid=1601961124&sr=8-4"
+                class="btn btn-primary" target="_blank">Buy From Amazon</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <img class="card-img-top" src="{{url_for('static', filename = '8.jpg')}}" alt="">
+            <div class="card-body">
+              <h4 class="card-title">HyperX Fury 8GB 3200MHz DDR4</h4>
+              <p class="card-text">HyperX Fury 8GB 3200MHz DDR4 CL16 DIMM 1Rx8  Black XMP Desktop Memory (HX432C16FB3/8)</p>
+              <ul>
+                <li>Updated low-profile heat spreader design</li>
+                <li>Cost-efficient, high-performance DDR4 upgrade</li>
+                <li>Intel XMP-ready profiles optimized for Intel’s latest chipsets</li>
+                <li>Available in fast speeds up to 3466MHz*</li>
+                <li>Plug N Play functionality at 2400MHz and 2666MHz</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.amazon.in/HyperX-3200MHz-Desktop-Memory-HX432C16FB3/dp/B07WJJ9CNG/ref=sr_1_5?dchild=1&keywords=ddr4+ram&qid=1601961124&sr=8-5"
+                class="btn btn-primary" target="_blank">Buy From Amazon</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <img class="card-img-top" src="{{url_for('static', filename = '9.jpg')}}" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Crucial 8GB DDR4 1.2v 2400Mhz</h4>
+              <p class="card-text">Crucial 8GB DDR4 1.2v 2400Mhz CL17 UDIMM RAM Memory Module for Desktop</p>
+              <ul>
+                <li>This Crucial RAM is an 8GB DDR4 memory with a memory speed of 2400MHz</li>
+                <li>This module has been tested to run at DDR4-2400 at a latency of CL-17 on 1.2V</li>
+                <li>This module comes in a 288- pin UDIMM form factor</li>
+                <li>Load programs faster, increase responsiveness, multitask smoothly, and run data-intensive applications with ease</li>
+                <li>The crucial RAM comes with a 10 Year Warranty</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.amazon.in/Crucial-8gb-Ddr4-Memory-Module/dp/B01BIWK9OK/ref=sr_1_8?dchild=1&keywords=ddr4+ram&qid=1601961124&sr=8-8"
+                class="btn btn-primary" target="_blank">Buy From Amazon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="py-2 bg-dark">
+    <div class="container">
+      <li>
+        <a class="m-0 text-center text-white" href="#">First Link</a>
+      </li>
+      <li>
+        <a class="m-0 text-center text-white" href="#">Second Link</a>
+      </li>
+      <li>
+        <a class="m-0 text-center text-white" href="#">Third Link</a>
+      </li>
+      <li>
+        <a class="m-0 text-center text-white" href="#">Fourth Link</a>
+      </li>
+      <p class="m-0 text-center text-white">Disclaimer: This website  &copy; only for education purpose.
+         If you are really interested in these products then go to amazon's official website.</p>
+    </div>
+
+    <!-- <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
+        <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="m-0 text-center text-white">First Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Second Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Third Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="m-0 text-center text-white">First Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Second Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Third Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="m-0 text-center text-white">First Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Second Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Third Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="m-0 text-center text-white">First Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Second Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Third Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="m-0 text-center text-white">First Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Second Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Third Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/6 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="m-0 text-center text-white">First Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Second Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Third Link</a>
+            </li>
+            <li>
+              <a class="m-0 text-center text-white">Fourth Link</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- /.container -->
+  </footer>
+
+
+
+
+
+
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
