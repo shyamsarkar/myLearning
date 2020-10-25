@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Heroic Features - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static', filename='css/heroic-features.css')}}" rel="stylesheet">
+
+    <style>
+        form div label {
+            font-weight: bold;
+        }
+
+       form div input{
+           padding-left: 2px;
+           padding-right: 2px;
+       }
+        .blue_border {
+            border: 2px solid blue;
+            width: 88%;
+            padding-left: 4px;
+        }
+
+        .edit_post {
+            margin-bottom: 20px;
+            
+        }
+
+        
+        .edit_post #title {
+            margin-left: 87px;
+        }
+
+        .edit_post #slug {
+            margin-left: 87px;
+        }
+
+        .edit_post #content {
+            margin-left: 60px;
+        }
+
+        
+        #post_submit_button{
+            position: relative;
+            left: 40%;
+            margin-bottom: 5%;
+            width: 20%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Editting Post of Website2</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Post</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h1 class="display-3">You can Edit Post from Here</h1>
+            <p class="lead">Keep editing all fields of post database of website2</p>
+            <a href="/" class="btn btn-primary btn-lg">Goto Home</a>
+        </header>
+
+
+
+
+        <!-- Page Features -->
+        <div>
+
+            <form action="/post/{{serial}}" method="POST">
+                
+                <div class="edit_post">
+                    <label for="title">Title</label>
+                    <input type="text" name ="title" id="title" class="blue_border" value="{{post.title}}">
+                </div>
+                <div class="edit_post">
+                    <label for="slug">Slug</label>
+                    <input type="text" name ="slug" id="slug" class="blue_border" value="{{post.slug}}">
+                </div>
+                <div class="edit_post">
+                    <label for="content">Content</label>
+                    <textarea name="content" id="content" class="blue_border" cols="21" rows="3">{{post.content}}</textarea>
+                </div>
+                
+                <div>
+                    <button type="submit" id="post_submit_button" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+
+        </div>
+        <!-- /.row -->
+
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+</body>
+
+</html>

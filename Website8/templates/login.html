@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .container {
+            padding-left: 30%;
+            padding-right: 40%;
+            padding-top: 15%;
+        }
+
+        .container form label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container form input {
+            height: 25px;
+            border: 2px solid lightskyblue;
+            width: 270px;
+        }
+
+        .container form input:hover {
+            border: 2px solid blue;
+        }
+
+        #name {
+            margin-left: 35px;
+        }
+
+        #password {
+            margin-left: 6px;
+        }
+        .login_page{
+            margin-bottom: 15px;
+        }
+        h1{
+            margin-left: 150px;
+        }
+        #submit{
+            font-size: 18px;
+            color: white;
+            background-color: darkmagenta;
+            height: 30px;
+            width: 100px;
+            margin-left: 160px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/login" method="POST">
+            <h1>Login</h1>
+            <div class="login_page">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="username">
+            </div>
+            <div class="login_page">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="password">
+            </div>
+            <div class="login_page">
+                <button type="submit" id="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

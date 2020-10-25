@@ -1,0 +1,7 @@
+This website 4 is for....
+
+
+#news paper
+#flask query
+#flask passing stirng to route or function
+#single link single article
