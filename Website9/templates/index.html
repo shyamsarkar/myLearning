@@ -5,15 +5,16 @@
 {% block style %}
 <style>
     #inr {
-        border: 2px solid lightgreen;
+        border: 2px solid rgb(17, 18, 19);
     }
 
     #inr:hover {
-        border: 2px solid lightskyblue;
+        
+        border: 2px solid lightgreen;
     }
 
     #usd {
-        border: 2px solid lightgreen;
+        border: 2px solid rgb(17, 18, 19);
         display: inline-block;
     }
 
@@ -24,7 +25,8 @@
     .main_form {
         display: inline;
     }
-    #submit_button{
+
+    #submit_button {
         height: 26px;
         background-color: darkgreen;
         color: white;
@@ -33,28 +35,51 @@
         border: 1px solid rgb(0, 97, 0);
         border-radius: 4px;
     }
-    #submit_button:hover{
+
+    #submit_button:hover {
         background-color: rgb(1, 143, 1);
     }
 
-    #result_converted{
+    #result_converted {
         display: inline-block;
         margin-left: 20px;
     }
-    #reset_button{
+
+    #reset_button {
         border: 1px solid rgb(0, 97, 0);
         width: 100px;
         background-color: darkgreen;
         color: white;
         border-radius: 8px;
-        padding: 3px ;
+        padding: 3px;
         font-size: 22px;
         text-align: center;
         display: inline-block;
         margin-left: 50px;
     }
-    #reset_button:hover{
+
+    #reset_button:hover {
         background-color: rgb(1, 143, 1);
+    }
+
+    nav{
+        background-color: darkviolet;
+        height: 44px;
+        padding-top: 15px;        
+    }
+    a{
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 20px;
+        text-decoration: none;
+    }
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    form label{
+        margin-left: 10px;
     }
 </style>
 
@@ -62,39 +87,37 @@
 
 {% block content %}
 
-<div>
-    <span style="padding: 4px; margin-bottom: 2px;">
-        <a href="/">Home</a>
-    </span>
-    <span style="padding: 4px; margin-bottom: 2px; ">
-        <a href="/user">User</a>
-    </span>
-    <span style="padding: 4px; margin-bottom: 2px; ">
-        <a href="/login">Login</a>
-    </span>
-    <span style="padding: 4px; margin-bottom: 2px; ">
-        <a href="/logout">logout</a>
-    </span>
 
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/user">User</a>
+        <a href="/login">Login</a>
+        <a href="/logout">logout</a>
+    </nav>
     <div>
         <h1>{{textline}}</h1>
     </div>
     <div class="main_form">
         <form action="/" method="POST" style="display: inline-block;">
             <label for="inr">Indian Rupees</label>
-            <input type="number" name="indian_rupees" id="inr" class="number_box"style="height: 20px;">
-            <input type="submit" value="Convert" id="submit_button" >
+            <input type="number" name="indian_rupees" id="inr" class="number_box" style="height: 20px;">
+            <input type="submit" value="Convert" id="submit_button">
+            
         </form>
     </div>
-    <div id="result_converted" >
+    <div id="result_converted">
         <label for="usd">US Dollar</label>
         {% if usd_rupees %}
-            <input type="text" id="usd" value="{{usd_rupees}}" class="number_box" style="margin-left: 25px; height: 20px;">
+        <input type="text" id="usd" value="{{usd_rupees}}" class="number_box" style="margin-left: 25px; height: 20px;">
         {% else %}
-            <input type="text" value="0" id="usd" class="number_box" style="margin-left: 25px; height: 20px;">
+        <input type="text" value="0" id="usd" class="number_box" style="margin-left: 25px; height: 20px;">
         {% endif %}
     </div>
-    <a href="/" style="text-decoration: none; width: 100px;"><p id="reset_button">Reset</p></a>
+    
+    <a href="/" style="width: 100px;">
+        <p id="reset_button">Home</p>
+    </a>
 
-</div>
+
 {% endblock %}

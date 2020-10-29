@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import json
 from datetime import datetime
@@ -15,7 +15,7 @@ else:
     app.config['SQLALCHEMY_DATABASE_URI'] = params['prod_uri']
 
 db = SQLAlchemy(app)
-
+app.secret_key = "thisissecretkey"
 
 class Contacts(db.Model):
     serial = db.Column(db.Integer, primary_key=True)
@@ -84,6 +84,8 @@ def contact():
         entry = Contacts(name=name, mobile=phone, msg=message,email=email, date=datetime.now())
         db.session.add(entry)
         db.session.commit()
+        flash("You message sent successful!", "information")
+        return redirect(url_for("contact"))
     return render_template('contact.html')
 
 

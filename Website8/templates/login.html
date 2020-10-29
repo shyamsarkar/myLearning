@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
+        form{
+            width: 100%;
+        }
         .container {
-            padding-left: 30%;
-            padding-right: 40%;
-            padding-top: 15%;
+            background-color: burlywood;
+            margin: 120px 414px;
+            height: 250px;
+            display: flex;
+            align-items: center;
         }
 
         .container form label {
@@ -19,12 +24,12 @@
 
         .container form input {
             height: 25px;
-            border: 2px solid lightskyblue;
+            border: 2px solid blue;
             width: 270px;
         }
 
         .container form input:hover {
-            border: 2px solid blue;
+            border: 2px solid lightskyblue;
         }
 
         #name {
@@ -34,13 +39,20 @@
         #password {
             margin-left: 6px;
         }
-        .login_page{
-            margin-bottom: 15px;
+
+        .login_page {
+            margin-left: 50px;
+            margin-bottom: 20px;
         }
-        h1{
-            margin-left: 150px;
+
+        h1 {
+            display: block;
+            text-align: center;
+            width: 100%;
+
         }
-        #submit{
+
+        #submit {
             font-size: 18px;
             color: white;
             background-color: darkmagenta;
@@ -50,13 +62,21 @@
             margin-top: 15px;
             cursor: pointer;
         }
+        #submit:hover{
+            border-radius: 4px;
+            background-color: rgb(168, 0, 168);
+        }
+
+        body {
+            background-color: blanchedalmond;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <form action="/login" method="POST">
-            <h1>Login</h1>
+            <h1>Login Form</h1>
             <div class="login_page">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="username">
