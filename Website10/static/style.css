@@ -1,11 +1,11 @@
 nav{
-            background-color: blue;
-            height: 50px;
-            margin: 0px;
-            padding: 1px;
-        }
-        li{
-            display: inline-block;
+        background-color: blue;
+        height: 50px;
+        margin: 0px;
+        padding: 1px;
+}
+li{
+    display: inline-block;
             color: white;
             margin-right: 25px;
             font-weight: bold;
@@ -22,3 +22,8 @@ nav{
             align-items: center;
             margin: auto;
         }
+
+.container form button{
+    width:50px;
+    background-color: blueviolet;
+}
