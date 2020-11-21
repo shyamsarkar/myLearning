@@ -14,6 +14,8 @@ def logout():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+    if ("dict_name" in session):
+        return redirect(url_for("dashboard"))
     if request.method == 'POST':
         id_name = request.form.get('name')
         id_pass = request.form.get('password')
@@ -21,8 +23,6 @@ def login():
         session["dict_name"] = id_name
         session["dict_pass"] = id_pass
         return redirect(url_for('dashboard'))
-    if ("dict_name" in session):
-        return redirect(url_for("dashboard"))
     return render_template("login.html")
 
 @app.route("/dashboard")
