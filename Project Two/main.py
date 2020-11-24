@@ -58,12 +58,13 @@ def login():
         password = request.form.get('password')
         query_email = Createac.query.filter_by(email=email)
         # query_email = Createac.query.filter_by(email=email, password=password)
-        session['email_id'] = email
-        session['pass_word'] = password
+
         for element in query_email:
             if element:
                 if element.password==password:
                     print("3. login Success")
+                    session['email_id'] = email
+                    session['pass_word'] = password
                     return redirect(url_for('home'))
                 else:
                     print("4. login failed!")

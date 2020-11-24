@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website 13</title>
+    <style>
+        .form_main{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+            }
+           input{
+                margin: 10px;
+                height: 30px;
+                width: 300px;
+           }
+
+    </style>
+</head>
+<body>
+    <div class="form_main">
+        <form action="/edit/{{serial}}" method="post">
+            <textarea name="name" >{{name}}</textarea>
+            <textarea name="surname" >{{surname}}</textarea>
+            <input type="submit" placeholder="Submit">
+        </form>
+    </div>
+</body>
+</html>

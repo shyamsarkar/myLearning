@@ -1,0 +1,12 @@
+{
+  "parameter":
+  {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/website2",
+    "prod_uri": "mysql://root:@localhost/website2",
+    "blog_name": "Welcome to Computer Build"
+
+  }
+
+
+}

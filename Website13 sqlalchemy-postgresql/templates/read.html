@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Read All</title>
+</head>
+<body>
+    {% for post in posts %}
+        <h4>{{post.serial}}. {{post.name}} {{post.surname}}</h4>
+    {% endfor %}
+</body>
+</html>
