@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import json
 app = Flask(__name__)
@@ -27,8 +27,8 @@ def take():
         entry = City(village=village)
         db.session.add(entry)
         db.session.commit()
-        return redirect('/')
-    return redirect('/')
+        return redirect(url_for('home'))
+    return redirect(url_for('home'))
 
 
 app.run(debug=True)
