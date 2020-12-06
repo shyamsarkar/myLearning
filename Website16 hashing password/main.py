@@ -4,7 +4,7 @@ from passlib.hash import sha256_crypt
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/website16'
-# app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 db = SQLAlchemy(app)
 
 class Information(db.Model):
@@ -22,11 +22,13 @@ def register():
     if request.method=='POST':
         email = request.form.get('email')
         password = request.form.get('password')
-        hashed_pass = sha256_crypt.encrypt(password)
-        entry = Information(email=email, password=hashed_pass)
-        db.session.add(entry)
-        db.session.commit()
-        return redirect(url_for('home'))
+        if (email!='' and password!=''):
+            hashed_pass = sha256_crypt.encrypt(password)
+            entry = Information(email=email, password=hashed_pass)
+            db.session.add(entry)
+            db.session.commit()
+            return redirect(url_for('home'))
+        return "Enter Email and Password"
     return redirect(url_for('home'))
 
 @app.route('/all')
@@ -47,5 +49,18 @@ def login():
     if login_value:
         return f"Login Successful {email}"
     return render_template('login.html')
+
+@app.route('/edit', methods=['GET','POST'])
+def edit():
+    if request.method=='POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+        details = Information.query.filter_by(email=email)
+        for elements in details:
+            print(elements.email, elements.password)
+        details.email = email
+        details.password = password
+        db.session.commit()
+    return render_template('edit.html')
 
 app.run(debug=True)
