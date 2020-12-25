@@ -126,7 +126,7 @@ def signup():
             available_email = verify_email.email
         if available_email=="0":
             if fname and lname and email and password and cpassword:
-                if len(password)>= 8:
+                if len(password)>= 8 and len(password)<=20:
                     if password == cpassword:
                         timing = datetime.now()
                         session.permanent = True
@@ -141,7 +141,7 @@ def signup():
                     else:
                         flash('Password Mismatch!', 'warning')
                 else:
-                    flash('Password Must be at least 8 characters.', 'danger')
+                    flash('Password Must be between 8 and 20 characters.', 'danger')
         else:
             flash('Email Already Exists','warning')
     return render_template('signup.html')
@@ -174,7 +174,7 @@ def login():
                 return redirect(url_for('home'))
             else:
                 flash('Invalid Password!', 'danger')
-    return render_template('login.html')
+    return redirect(url_for('signup'))
 
 
 """" LogOut Route """
@@ -186,7 +186,7 @@ def logout():
         session.pop('emailid', None)
         session.pop('pasword', None)
         flash("Logged Out Successfully", "success")
-    return redirect(url_for('login'))
+    return redirect(url_for('signup'))
 
 
 """ Update Profile Route """
