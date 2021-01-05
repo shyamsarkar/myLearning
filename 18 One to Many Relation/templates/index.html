@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One to Many Relation</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        form{
+            display: flex;
+            margin: 50px;
+        }
+        .form-group{
+          margin: 10px 50px;
+          border: 4px solid green;
+          padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="form-group">
+    <form action="/human" method="POST">
+        <input type="text" name="name" placeholder="Person Name (Owner)">
+        <button type="submit">Submit</button>
+    </form>
+    <form action="/animal" method="POST">
+        <input type="text" name="hname" placeholder="Owner Name">
+        <input type="text" name="pname" placeholder="Pet Name">
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+
+
+
+</body>
+</html>
