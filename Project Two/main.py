@@ -5,7 +5,7 @@ from datetime import datetime
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/project2'
 db = SQLAlchemy(app)
-app.secret_key = 'this_website_is_for_complete_chatting'
+app.secret_key = 'this_is_project_two'
 
 class Createac(db.Model):
     serial = db.Column(db.Integer, primary_key=True)
