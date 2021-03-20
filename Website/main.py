@@ -149,10 +149,6 @@ def signup():
 
 """ Login Route """
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2bef6ead9048f140f7a3a75094a1d3f679f8e060
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if ("emailid" in session) and "pasword" in session:
