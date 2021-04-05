@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/18 One to Many Relation.iml" filepath="$PROJECT_DIR$/.idea/18 One to Many Relation.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/Website18 One to Many Relation.iml" filepath="$PROJECT_DIR$/.idea/Website18 One to Many Relation.iml" />
->>>>>>> 2bef6ead9048f140f7a3a75094a1d3f679f8e060
     </modules>
   </component>
 </project>

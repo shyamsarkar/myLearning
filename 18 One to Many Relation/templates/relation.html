@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$Title$</title>
+    <title>One-Many Relation</title>
 </head>
 <body>
-$END$
+    <form action="/personname" method="POST">
+        <input type="text" name="name" id="name" placeholder="Person Name">
+        <button type="submit">Submit</button>
+    </form>
+    <form action="/addressname" method="POST">
+        <input type="email" name="email" id="email" placeholder="Email ID">
+        <input type="text" name="personname" id="personname" placeholder="Person Name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <button id="ShowDetail">Show</button>
+    <div id="AllUsers"></div>
+
+
+    <button id="ShowHouse">Show Emails</button>
+    <div id="AllHouses"></div>
+
+
+    <script>
+        let ShowDetail = document.getElementById('ShowDetail');
+        let AllUsers = document.getElementById('AllUsers');
+        let ShowHouses = document.getElementById('ShowHouse');
+        let AllHouses = document.getElementById('AllHouses');
+        ShowDetail.addEventListener('click', ()=>{
+            fetch('/show')
+            .then(response => response.json())
+            .then((data) => {
+                AllUsers.innerHTML = data;
+            });
+        })
+        ShowHouses.addEventListener('click', ()=>{
+            fetch('/houses')
+            .then(response => response.json())
+            .then((data) => {
+                AllHouses.innerHTML = data;
+            });
+        })
+    </script>
+
 </body>
 </html>
