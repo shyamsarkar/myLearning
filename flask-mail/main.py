@@ -18,7 +18,7 @@ def home():
 def sendmail():
     title = request.form.get('title')
     content = request.form.get('content')
-    msg = Message(subject=title,body = content, sender=app.config['MAIL_USERNAME'], recipients=['amisam15sarkar05@gmail.com'])
+    msg = Message(subject=title,body = content, sender=app.config['MAIL_USERNAME'], recipients=['example@gmail.com'])
 
     mail.send(msg)
     return "Message Sent Successfully!<a href='/'>Home</a>"
