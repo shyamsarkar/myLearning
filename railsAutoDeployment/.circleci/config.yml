@@ -1,0 +1,68 @@
+# CircleCI configuration with rbenv for Ruby version management
+version: 2.1
+orbs:
+  ruby: circleci/ruby@2.0.1
+jobs:
+  build:
+    machine:
+      image: ubuntu-2204:current
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install rbenv and dependencies
+          command: |
+            export DEBIAN_FRONTEND=noninteractive
+            sudo apt-get update
+            sudo apt-get install -y curl git build-essential libssl-dev libreadline-dev zlib1g-dev
+
+            # Install rbenv
+            git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+            echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+            echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+            source ~/.bashrc
+
+            # Install ruby-build as a plugin for rbenv
+            git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+      - run:
+          name: Install Ruby 3.3.2 with rbenv
+          command: |
+            source ~/.bashrc
+            rbenv --version
+            rbenv install --list-all
+            rbenv install 3.3.2
+            rbenv global 3.3.2
+            ruby -v
+            gem install bundler -v 2.5.16
+            # rbenv rehash
+
+      - run:
+          name: Bundle Install
+          command: |
+            source ~/.bashrc
+            rbenv exec bundle install --jobs=4 --retry=3
+
+      - run:
+          name: rspec test
+          command: |
+            source ~/.bashrc
+            rbenv exec bundle exec rspec
+
+      # Uncomment the following lines if you want to run Rubocop
+      # - run:
+      #     name: Run Rubocop
+      #     command: |
+      #       source ~/.bashrc
+      #       rbenv exec bundle exec rubocop
+
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+# bundle exec cap production deploy

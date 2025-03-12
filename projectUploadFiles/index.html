@@ -1,0 +1,74 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Upload</title>
+</head>
+<body>
+    <h1>Upload Movies</h1>
+    <input type="file" id="fileInput" multiple>
+    <ul id="uploadStatus"></ul>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const uploadStatus = document.getElementById('uploadStatus');
+        const fileQueue = [];  // Queue to store files
+        let isUploading = false;
+
+        fileInput.addEventListener('change', (event) => {
+            const files = event.target.files;
+
+            // Add selected files to the queue
+            for (let i = 0; i < files.length; i++) {
+                fileQueue.push(files[i]);
+            }
+
+            // Start uploading if not already in progress
+            if (!isUploading) {
+                uploadNextFile();
+            }
+        });
+
+        // Function to upload the next file in the queue
+        async function uploadNextFile() {
+            if (fileQueue.length === 0) {
+                isUploading = false;
+                return; // No more files to upload
+            }
+
+            isUploading = true; // Set uploading flag
+            const file = fileQueue.shift();  // Take the next file from the queue
+
+            // Create FormData and append the file
+            const formData = new FormData();
+            formData.append('movie', file);
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const li = document.createElement('li');
+                    li.textContent = `Uploaded: ${file.name}`;
+                    uploadStatus.appendChild(li);
+                } else {
+                    const li = document.createElement('li');
+                    li.textContent = `Failed: ${file.name}`;
+                    uploadStatus.appendChild(li);
+                }
+            } catch (error) {
+                const li = document.createElement('li');
+                li.textContent = `Error: ${file.name}`;
+                uploadStatus.appendChild(li);
+            }
+
+            // After uploading, upload the next file
+            uploadNextFile();
+        }
+    </script>
+</body>
+</html>

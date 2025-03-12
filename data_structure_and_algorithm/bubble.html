@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("---------------------------");
+        // function generateRandomArray() {
+        //     const randomNumbers = [];
+
+        //     for (let i = 0; i < 10; i++) {
+        //         // Generate random number between 0 and 100
+        //         const randomNumber = Math.floor(Math.random() * 101);
+        //         randomNumbers.push(randomNumber);
+        //     }
+
+        //     return randomNumbers;
+        //     // console.log(generateRandomArray());
+        // }
+
+        // const data = [1, 57, 53, 18, 25, 99, 16, 38, 91, 95]
+        const data = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+        const bubbleSort = (inputData, order = 'asc') => {
+
+            for (let i = 0; i < inputData.length - 1; i++) {
+
+                for (j = 0; j < inputData.length - 1; j++) {
+                    // console.log(i, ' ', j);
+                    if (inputData[j] > inputData[j + 1]) {
+                        let temp = inputData[j];
+                        inputData[j] = inputData[j + 1]
+                        inputData[j + 1] = temp;
+                    }
+                }
+                console.log(inputData);
+            }
+
+            return inputData;
+        }
+        console.log(data);
+        bubbleSort(data);
+        console.log(data);
+
+    </script>
+</body>
+
+</html>
