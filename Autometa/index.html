@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autometa</title>
+</head>
+
+<body>
+  <h1>Autometa</h1>
+
+  <br>
+
+  <h4>
+    <input type="text" id="input_box" value="" placeholder="Random Text" style="width: 500px;height: 30px;">
+    <button type="button" onClick="copyText();" style="height: 30px;">Copy</button>
+  </h4>
+
+  <button type="button" onclick="stopInterval();">Stop</button>
+
+
+  <script>
+    
+    let intervalId = setInterval(() => {
+      const functionArray = [
+        string_one,
+        string_two,
+        string_three,
+        string_four,
+        string_five,
+        string_six,
+        // string_seven,
+        string_eight
+      ]
+      const randomIndex = Math.floor(Math.random() * functionArray.length);
+      const randomFunction = functionArray[randomIndex];
+      randomFunction();
+    }, 3000);
+
+    function stopInterval(){
+      clearInterval(intervalId);
+    }
+    
+    async function copyText() {
+      try {
+        await navigator.clipboard.writeText(document.getElementById('input_box').value);
+        console.log('Text successfully copied to clipboard');
+      } catch (err) {
+        console.error('Unable to copy text to clipboard', err);
+      }
+    }
+
+    function update(text) {
+      document.getElementById('input_box').value = text;
+    }
+
+    function string_one() {
+      console.log("String One");
+      fetch('https://random-word-api.herokuapp.com/word').then(resp => resp.json()).then(data => update(`What is the meaning of ${data[0]} in hindi`));
+    }
+
+    function string_two() {
+      console.log("String Two");
+      fetch('https://www.boredapi.com/api/activity').then(resp => resp.json()).then(data => update(data['activity']));
+    }
+
+    function string_three() {
+      console.log("String Three");
+      fetch('https://official-joke-api.appspot.com/random_joke').then(resp => resp.json()).then(data => update(data['setup']));
+    }
+    function string_four() {
+      console.log("String Four");
+      fetch('https://randomuser.me/api/').then(resp => resp.json()).then(data => {
+        update(`Who is ${data["results"][0]['name']['first']} ${data["results"][0]['name']['last']} from ${data["results"][0]['location']['country']}`)
+      });
+    }
+    function string_five() {
+      console.log("String Five");
+      fetch('https://catfact.ninja/fact').then(resp => resp.json()).then(data => update(data['fact']));
+    }
+    function string_six() {
+      console.log("String Six");
+      fetch('https://api.quotable.io/quotes/random').then(resp => resp.json()).then(data => update(data[0]['content']));
+    }
+    // function string_seven() {
+    //   console.log("String Seven");
+    //   fetch('https://idiom-api.su.ysnirix.xyz/api/the%20@pluralNoun%20is%20@gerund').then(resp => resp.json()).then(data => update(data['results']));
+    // }
+    function string_eight() {
+      console.log("String Eight");
+      fetch('https://opentdb.com/api.php?amount=1').then(resp => resp.json()).then(data => update(data['results'][0]['question']));
+    }
+  </script>
+</body>
+
+</html>
